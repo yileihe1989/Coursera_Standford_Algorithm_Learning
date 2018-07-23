@@ -12,7 +12,6 @@ def distance(pair1, pair2):
 def brute_force(px):
     num_points = len(px)
     pm, qm, dm = px[0], px[1], distance(px[0], px[1])
-
     for i in range(num_points - 1):
         for j in range(i + 1, num_points):
             d_temp = distance(px[i], px[j])
@@ -26,7 +25,6 @@ def closest_split_pair(plist_y,  delta,  mid_x):
     sub_y = [pair for pair in plist_y if (pair[0] >= mid_x - delta) and (pair[0] <= mid_x + delta)]
     num_points = len(sub_y)
     pm, qm, dm = None, None, delta
-
     for i in range(num_points - 1):
         for j in range(i + 1, min(i + 8, num_points)):
             d_temp = distance(sub_y[i], sub_y[j])
