@@ -1,6 +1,12 @@
 """
   Compute nearest pair of points using divide and conquer
   Time Complexity: O(nlogn)
+
+  To prove why we only need to check at most 7 points during the procedure of finding split pair, hold close to
+  those two Lemmas provided in video.
+  1) all the points have to be within the rectangular
+  2) each square (delta/2) can only have one point. If two points cohabit one square, then it violates the rule that
+  their distance has to be greater than delta.   
 """
 import numpy as np
 
